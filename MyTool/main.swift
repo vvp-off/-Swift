@@ -17,6 +17,15 @@ print(float)
 print(double1)
 print(UInt1)
 
+
+print(Int.max)
+print(Int.min)
+print(stringa.maximumLengthOfBytes(using: .ascii))
+print(stringa.max() ?? "fail")
+print(Double.greatestFiniteMagnitude)
+print(Float.greatestFiniteMagnitude)
+
+
 //2
 typealias item = (Int, String)
 var bottle = item(7,"CocaKola")
@@ -41,5 +50,64 @@ print(sumonInt)
 print(sumonString)
 print(summonFloat)
 print(sumonStringInt)
+
+//end
+
+// 02.10.26
+
+// 4
+enum Operation {
+    case plus
+    case minus
+    case multiply
+    case divide
+}
+
+func calk(_ firstItem: Int, _ operation: Operation,  _ secondItem: Int) -> () {
+    switch operation {
+    case .plus:
+        return print("\(firstItem) + \(secondItem) = \(firstItem + secondItem)")
+    case .minus:
+        return print("\(firstItem) - \(secondItem) = \(firstItem - secondItem)")
+    case .multiply:
+        return print("\(firstItem) * \(secondItem) = \(firstItem * secondItem)")
+    case .divide:
+        return print("\(firstItem) / \(secondItem) = \(firstItem / secondItem)")
+    }
+}
+
+calk(10, .plus, 7)
+calk(99, .minus, 7)
+calk(5, .multiply, 7)
+calk(100, .divide, 50)
+
+// 5
+print("Input Somes:")
+let finish = readLine() ?? "fail"
+print("your text: \(finish)")
+print("finish")
+
+
+
+
+//        2. String
+
+
+// 2.1
+let name = "Vladimir"
+let surname = "VP"
+let age = "31"
+let address = "Deutchland"
+let hobbies = "Football and Chess"
+
+// 2.2
+
+let story = """
+My name \(name) \(surname), i am \(age) years old.
+My address now is \(address). 
+My hoobies is \(hobbies) 
+"""
+
+print(story)
 
 //end
